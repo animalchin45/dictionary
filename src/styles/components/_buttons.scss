@@ -1,0 +1,51 @@
+.btn {
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  cursor: pointer;
+  display: flex;
+
+  &--font {
+    align-items: center;
+    display: flex;
+    height: 2.4rem;
+    justify-content: space-between;
+    margin-right: 2.6rem;
+    width: 12rem;
+  }
+
+  &--theme {
+    border: none;
+    border-radius: 1rem;
+    height: 2rem;
+    position: relative;
+    width: 4rem;
+
+    &--lite {
+      background-color: $color-dark-gray;
+    }
+
+    &--dark {
+      background-color: $color-primary;
+    }
+
+    &--switch {
+      background-color: $color-white;
+      border: none;
+      border-radius: 1rem;
+      height: 1.4rem;
+      position: absolute;
+      width: 1.4rem;
+      z-index: 2;
+
+      &--lite {
+        left: 3px;
+        top: 3px;
+      }
+
+      &--dark {
+        right: 3px;
+        top: 3px;
+      }
+    }
+  }
+}
