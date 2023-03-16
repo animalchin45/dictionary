@@ -1,5 +1,4 @@
 .header {
-  // align-items: center;
   display: grid;
   grid-column: 2 / 3;
   grid-template-columns: 3.2rem 1fr 25.2rem;
@@ -18,7 +17,34 @@
     grid-template-columns: 14.6rem 1px 10.6rem;
     justify-content: flex-end;
     height: 100%;
+    position: relative;
     width: 100%;
+
+    &__font-menu {
+      border: none;
+      border-radius: 1.6rem;
+      display: flex;
+      flex-direction: column;
+      height: 15.2rem;
+      justify-content: space-around;
+      right: 12rem;
+      list-style: none;
+      padding: 2.4rem;
+      position: absolute;
+      top: 4.7rem;
+      width: 18.3rem;
+      z-index: 3;
+
+      &--lite {
+        background-color: $color-white;
+        filter: drop-shadow(0px 5px 30px rgba($color-black, 0.1));
+      }
+
+      &--dark {
+        background-color: $color-dark-gray;
+        filter: drop-shadow(0px 5px 30px rgba($color-primary, 1));
+      }
+    }
 
     &__divide {
       background-color: rgba(151, 151, 151, 1);
@@ -32,6 +58,20 @@
       justify-content: space-between;
       margin-left: 2.6rem;
       width: 8rem;
+
+      &__moon {
+        &--lite {
+          & path {
+            stroke: #838383;
+          }
+        }
+
+        &--dark {
+          & path {
+            stroke: $color-primary;
+          }
+        }
+      }
     }
   }
 }

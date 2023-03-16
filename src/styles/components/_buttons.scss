@@ -18,6 +18,7 @@
     border-radius: 1rem;
     height: 2rem;
     position: relative;
+    transition: all $fade ease-in-out;
     width: 4rem;
 
     &--lite {

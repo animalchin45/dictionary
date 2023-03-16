@@ -95,8 +95,7 @@ $font-line-xlarge: 7.7rem;
   font-family: 'Inconsolata', monospace;
 }
 
-body {
-  color: $color-black;
+p {
   font-size: $font-body-medium;
   font-weight: normal;
   line-height: $font-line-medium;
@@ -104,6 +103,14 @@ body {
 
 .p-bold {
   font-weight: bold;
+
+  &--lite {
+    color: $color-black;
+  }
+
+  &--dark {
+    color: $color-white;
+  }
 }
 
 .p-small {
@@ -132,8 +139,22 @@ h3 {
 }
 
 .search {
-  & input {
+  &__input {
     font-size: $font-heading-small;
     font-weight: bold;
+
+    &--lite {
+      color: $color-black;
+      &::placeholder {
+        color: $color-black;
+      }
+    }
+
+    &--dark {
+      color: $color-white;
+      &::placeholder {
+        color: $color-white;
+      }
+    }
   }
 }

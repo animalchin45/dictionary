@@ -7,16 +7,25 @@
   position: relative;
   width: 100%;
 
-  & input {
-    background-color: $color-off-white;
-    border: 1px solid rgba($color-secondary, 0);
+  &__input {
+    border: 2px solid rgba($color-primary, 0);
     border-radius: 1.6rem;
+    caret-color: $color-primary;
     height: 100%;
     padding: 2rem 2.4rem;
     width: 100%;
 
     &:focus {
-      border: 1px solid rgba($color-secondary, 1);
+      border: 2px solid rgba($color-primary, 1);
+      outline: none !important;
+    }
+
+    &--lite {
+      background-color: $color-off-white;
+    }
+
+    &--dark {
+      background-color: $color-dark-gray;
     }
   }
 
