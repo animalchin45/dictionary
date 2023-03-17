@@ -21,14 +21,6 @@
     transition: all $fade ease-in-out;
     width: 4rem;
 
-    &--lite {
-      background-color: $color-dark-gray;
-    }
-
-    &--dark {
-      background-color: $color-primary;
-    }
-
     &--switch {
       background-color: $color-white;
       border: none;
@@ -37,16 +29,6 @@
       position: absolute;
       width: 1.4rem;
       z-index: 2;
-
-      &--lite {
-        left: 3px;
-        top: 3px;
-      }
-
-      &--dark {
-        right: 3px;
-        top: 3px;
-      }
     }
   }
 }

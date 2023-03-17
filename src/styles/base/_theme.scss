@@ -1,0 +1,77 @@
+.theme {
+  &__app {
+    &--lite {
+      background-color: $color-white;
+    }
+
+    &--dark {
+      background-color: $color-black;
+    }
+  }
+
+  &__font {
+    &--lite {
+      color: $color-black;
+    }
+
+    &--dark {
+      color: $color-white;
+    }
+  }
+
+  &__btn {
+    &--lite {
+      background-color: $color-dark-gray !important;
+    }
+
+    &--dark {
+      background-color: $color-primary !important;
+    }
+  }
+
+  &__switch {
+    &--lite {
+      left: 3px;
+      top: 3px;
+    }
+
+    &--dark {
+      right: 3px;
+      top: 3px;
+    }
+  }
+
+  &__moon {
+    &--lite {
+      & path {
+        stroke: #838383;
+      }
+    }
+
+    &--dark {
+      & path {
+        stroke: $color-primary;
+      }
+    }
+  }
+
+  &__search {
+    &__input {
+      &--lite {
+        background-color: $color-off-white;
+        color: $color-black;
+        &::placeholder {
+          color: $color-black;
+        }
+      }
+
+      &--dark {
+        background-color: $color-dark-gray;
+        color: $color-white;
+        &::placeholder {
+          color: $color-white;
+        }
+      }
+    }
+  }
+}

@@ -6,7 +6,7 @@ function Search({ font, theme }) {
   return (
     <form className='search'>
       <input
-        className={`search__input search__input--${theme} ${font}`}
+        className={`search__input theme__search__input--${theme} ${font}`}
         placeholder='search dictionary'
       ></input>
       <button className='btn'>

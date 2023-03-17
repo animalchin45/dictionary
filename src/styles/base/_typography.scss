@@ -131,6 +131,10 @@ h2 {
   line-height: $font-line-large;
 }
 
+.h2--phonetic {
+  color: $color-primary;
+}
+
 h3 {
   color: $color-dark-gray;
   font-size: $font-heading-small;
@@ -142,19 +146,5 @@ h3 {
   &__input {
     font-size: $font-heading-small;
     font-weight: bold;
-
-    &--lite {
-      color: $color-black;
-      &::placeholder {
-        color: $color-black;
-      }
-    }
-
-    &--dark {
-      color: $color-white;
-      &::placeholder {
-        color: $color-white;
-      }
-    }
   }
 }

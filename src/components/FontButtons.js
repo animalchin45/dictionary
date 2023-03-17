@@ -11,7 +11,7 @@ function FontButtons({ font, setFont, theme }) {
     } else if (font === 'serif') {
       return 'Serif'
     } else if (font === 'mono') {
-      return 'Monospace'
+      return 'Mono'
     }
   }
 
@@ -27,7 +27,9 @@ function FontButtons({ font, setFont, theme }) {
   return (
     <>
       <button className='btn btn--font' onClick={() => handleFontClick()}>
-        <p className={`p-bold p-bold--${theme} ${font}`}>{fontText(font)}</p>
+        <p className={`p-bold theme__font--${theme} ${font}`}>
+          {fontText(font)}
+        </p>
         <IconArrowDown />
       </button>
       {open && (
@@ -39,17 +41,19 @@ function FontButtons({ font, setFont, theme }) {
               className='btn'
               onClick={() => handleFontSelect('sans-serif')}
             >
-              <p className={`p-bold p-bold--${theme} sans-serif`}>Sans Serif</p>
+              <p className={`p-bold theme__font--${theme} sans-serif`}>
+                Sans Serif
+              </p>
             </button>
           </li>
           <li>
             <button className='btn' onClick={() => handleFontSelect('serif')}>
-              <p className={`p-bold p-bold--${theme} serif`}>Serif</p>
+              <p className={`p-bold theme__font--${theme} serif`}>Serif</p>
             </button>
           </li>
           <li>
             <button className='btn' onClick={() => handleFontSelect('mono')}>
-              <p className={`p-bold p-bold--${theme} mono`}>Mono</p>
+              <p className={`p-bold theme__font--${theme} mono`}>Mono</p>
             </button>
           </li>
         </ul>

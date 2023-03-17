@@ -23,14 +23,12 @@ function Header({ font, setFont, theme, setTheme }) {
 
         <div className='header__options__theme'>
           <button
-            className={`btn btn--theme btn--theme--${theme}`}
+            className={`btn btn--theme theme__btn--${theme}`}
             onClick={() => handleThemeClick()}
           >
-            <div
-              className={`btn--theme--switch btn--theme--switch--${theme}`}
-            ></div>
+            <div className={`btn--theme--switch theme__switch--${theme}`}></div>
           </button>
-          <IconMoon className={`header__options__theme__moon--${theme}`} />
+          <IconMoon className={`theme__moon--${theme}`} />
         </div>
       </div>
     </header>

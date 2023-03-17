@@ -3,12 +3,4 @@
   grid-template-columns: 1fr 73.6rem 1fr;
   min-width: 100vw;
   transition: all $fade ease-in-out;
-
-  &--lite {
-    background-color: $color-white;
-  }
-
-  &--dark {
-    background-color: $color-black;
-  }
 }
