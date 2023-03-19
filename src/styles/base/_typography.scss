@@ -101,6 +101,12 @@ p {
   line-height: $font-line-medium;
 }
 
+.p {
+  font-size: $font-body-medium;
+  font-weight: normal;
+  line-height: $font-line-medium;
+}
+
 .p-bold {
   font-weight: bold;
 
@@ -136,6 +142,17 @@ h2 {
 }
 
 h3 {
+  font-size: $font-heading-medium;
+  font-weight: bold;
+  line-height: $font-line-large;
+}
+
+.h3--synonym {
+  color: $color-primary;
+  margin-left: 2.2rem;
+}
+
+h4 {
   color: $color-dark-gray;
   font-size: $font-heading-small;
   font-weight: normal;

@@ -9,13 +9,15 @@ import Display from './components/Display'
 function App() {
   const [font, setFont] = useState('sans-serif')
   const [theme, setTheme] = useState('lite')
-  const [currentWord, setCurrentWord] = useState([])
+  const [currentWord, setCurrentWord] = useState({
+    meanings: [],
+  })
 
   useEffect(() => {
     const data = async () => {
-      const response = await word('keyboard')
+      const response = await word('dog')
       setCurrentWord(response[0])
-      console.log(response[0])
+      // console.log(response[0])
     }
 
     data()
