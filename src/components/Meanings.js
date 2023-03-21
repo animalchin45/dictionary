@@ -2,6 +2,8 @@ import React from 'react'
 
 import { v4 as uuid } from 'uuid'
 
+import NewWindow from '../img/icon-new-window.svg'
+
 function Meanings({ theme, currentWord }) {
   const renderedMeanings = currentWord.meanings.map((meaning) => {
     return (
@@ -36,7 +38,21 @@ function Meanings({ theme, currentWord }) {
     )
   })
 
-  return <>{renderedMeanings}</>
+  return (
+    <>
+      {renderedMeanings}
+      <div className='display__source'>
+        <p className='p-small p-small--source'>Source</p>
+        <a
+          className={`p-small theme__font--${theme}`}
+          href={currentWord.sourceUrls[0]}
+        >
+          {currentWord.sourceUrls[0]}
+        </a>
+        <NewWindow />
+      </div>
+    </>
+  )
 }
 
 export default Meanings

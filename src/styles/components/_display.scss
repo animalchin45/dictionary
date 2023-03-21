@@ -75,4 +75,16 @@
       display: flex;
     }
   }
+
+  &__source {
+    display: flex;
+
+    & p {
+      margin-right: 2rem;
+    }
+
+    & svg {
+      margin-left: 0.5rem;
+    }
+  }
 }

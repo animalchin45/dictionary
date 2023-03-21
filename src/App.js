@@ -11,13 +11,17 @@ function App() {
   const [theme, setTheme] = useState('lite')
   const [currentWord, setCurrentWord] = useState({
     meanings: [],
+    sourceUrls: [],
   })
 
   useEffect(() => {
     const data = async () => {
-      const response = await word('dog')
-      setCurrentWord(response[0])
-      // console.log(response[0])
+      try {
+        const response = await word('card')
+        setCurrentWord(response[0])
+      } catch (error) {
+        console.log(error.response.data.message)
+      }
     }
 
     data()

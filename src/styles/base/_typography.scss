@@ -123,6 +123,11 @@ p {
   font-size: $font-body-small;
   font-weight: normal;
   line-height: $font-line-small;
+  text-decoration: underline;
+
+  &--source {
+    color: $color-dark-gray;
+  }
 }
 
 h1 {
