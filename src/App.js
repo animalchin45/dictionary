@@ -13,14 +13,30 @@ function App() {
     meanings: [],
     sourceUrls: [],
   })
+  const [termError, setTermError] = useState(false)
+  const [errorMessage, setErrorMessage] = useState({
+    isError: false,
+    title: '',
+    message: '',
+  })
 
   useEffect(() => {
     const data = async () => {
       try {
-        const response = await word('card')
+        const response = await word('cat')
         setCurrentWord(response[0])
+        setErrorMessage({
+          isError: false,
+          title: '',
+          message: '',
+        })
       } catch (error) {
-        console.log(error.response.data.message)
+        setErrorMessage({
+          isError: true,
+          title: error.response.data.title,
+          message: error.response.data.message,
+        })
+        console.log(error)
       }
     }
 
@@ -30,8 +46,19 @@ function App() {
   return (
     <div className={`app theme__app--${theme} ${font}`}>
       <Header font={font} setFont={setFont} theme={theme} setTheme={setTheme} />
-      <Search font={font} theme={theme} />
-      <Display theme={theme} currentWord={currentWord} />
+      <Search
+        font={font}
+        theme={theme}
+        setCurrentWord={setCurrentWord}
+        termError={termError}
+        setTermError={setTermError}
+        setErrorMessage={setErrorMessage}
+      />
+      <Display
+        theme={theme}
+        currentWord={currentWord}
+        errorMessage={errorMessage}
+      />
     </div>
   )
 }

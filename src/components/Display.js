@@ -3,12 +3,21 @@ import React from 'react'
 import Word from './Word'
 import Meanings from './Meanings'
 
-function Display({ theme, currentWord }) {
-  console.log(currentWord)
+function Display({ theme, currentWord, errorMessage }) {
   return (
     <div className={`display app--${theme}`}>
-      <Word theme={theme} currentWord={currentWord} />
-      <Meanings theme={theme} currentWord={currentWord} />
+      {currentWord.meanings.length > 0 && (
+        <>
+          <Word theme={theme} currentWord={currentWord} />
+          <Meanings theme={theme} currentWord={currentWord} />
+        </>
+      )}
+      {errorMessage.isError && (
+        <div>
+          <h4 className={`theme__font--${theme}`}>{errorMessage.title}</h4>
+          <p>{errorMessage.message}</p>
+        </div>
+      )}
     </div>
   )
 }

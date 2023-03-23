@@ -130,6 +130,13 @@ p {
   }
 }
 
+.p-error {
+  color: $color-secondary;
+  font-size: $font-heading-small;
+  font-weight: normal;
+  line-height: $font-line-medium;
+}
+
 h1 {
   font-size: $font-heading-large;
   font-weight: bold;
