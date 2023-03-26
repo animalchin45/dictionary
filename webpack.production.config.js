@@ -67,9 +67,9 @@ module.exports = {
       cleanOnceBeforeBuildPatterns: ['**/*'],
     }),
     new HtmlWebpackPlugin({
-      title: 'React Template',
+      title: 'Dictionary App',
       template: 'src/index.hbs',
-      description: 'React Template',
+      description: 'Dictionary App',
       favicon: './src/img/favicon.png',
     }),
     new Dotenv(),
