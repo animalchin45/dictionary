@@ -46,6 +46,8 @@ function Meanings({ theme, currentWord }) {
         <a
           className={`p-small theme__font--${theme}`}
           href={currentWord.sourceUrls[0]}
+          target='_blank'
+          rel='noreferrer noopener'
         >
           {currentWord.sourceUrls[0]}
         </a>
