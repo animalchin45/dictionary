@@ -177,3 +177,29 @@ h4 {
     font-weight: bold;
   }
 }
+
+@media (max-width: $mobile-break) {
+  h1 {
+    font-size: 3.2rem;
+  }
+
+  h2 {
+    font-size: $font-body-medium;
+  }
+
+  h3 {
+    font-size: $font-body-medium;
+  }
+
+  h4 {
+    font-size: $font-body-small;
+  }
+
+  p {
+    font-size: $font-body-small;
+  }
+
+  .p {
+    font-size: $font-body-small;
+  }
+}

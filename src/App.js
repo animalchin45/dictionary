@@ -31,11 +31,6 @@ function App() {
           message: '',
         })
       } catch (error) {
-        setErrorMessage({
-          isError: true,
-          title: error.response.data.title,
-          message: error.response.data.message,
-        })
         console.log(error)
       }
     }

@@ -46,7 +46,11 @@ function Search({
   return (
     <form className='search' onSubmit={handleOnSubmit}>
       <input
-        className={`search__input theme__search__input--${theme} ${font}}`}
+        className={
+          termError
+            ? `search__input search__input--error theme__search__input--${theme} ${font}}`
+            : `search__input theme__search__input--${theme} ${font}}`
+        }
         placeholder='search dictionary'
         onChange={handleOnChange}
       ></input>

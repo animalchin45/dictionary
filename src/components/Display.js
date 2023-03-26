@@ -13,7 +13,7 @@ function Display({ theme, currentWord, errorMessage }) {
         </>
       )}
       {errorMessage.isError && (
-        <div>
+        <div className='display__error'>
           <h4 className={`theme__font--${theme}`}>{errorMessage.title}</h4>
           <p>{errorMessage.message}</p>
         </div>

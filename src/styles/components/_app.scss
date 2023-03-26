@@ -7,3 +7,9 @@
   padding-bottom: 4rem;
   transition: all $fade ease-in-out;
 }
+
+@media (max-width: $tablet-break) {
+  .app {
+    grid-template-columns: 1fr 90% 1fr;
+  }
+}
