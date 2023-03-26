@@ -20,10 +20,13 @@ function App() {
     message: '',
   })
 
+  let dark = window.matchMedia('(prefers-color-scheme: dark)').matches
+
   useEffect(() => {
     const data = async () => {
       try {
         const response = await word('cat')
+        console.log(response[0])
         setCurrentWord(response[0])
         setErrorMessage({
           isError: false,
@@ -33,6 +36,10 @@ function App() {
       } catch (error) {
         console.log(error)
       }
+    }
+
+    if (dark) {
+      setTheme('dark')
     }
 
     data()
