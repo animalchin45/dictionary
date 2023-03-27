@@ -25,7 +25,7 @@ function App() {
   useEffect(() => {
     const data = async () => {
       try {
-        const response = await word('cat')
+        const response = await word('developer')
         console.log(response[0])
         setCurrentWord(response[0])
         setErrorMessage({
