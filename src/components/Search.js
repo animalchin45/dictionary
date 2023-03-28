@@ -23,6 +23,8 @@ function Search({
 
     if (term === '') {
       setTermError(true)
+    } else {
+      setTermError(false)
     }
 
     try {
